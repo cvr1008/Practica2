@@ -24,7 +24,7 @@ def entrena_perceptron(X, y, z, eta, t, funcion_activacion):
         eta : float
             Coeficiente de aprendizaje.
         t : int
-            Número de epochs o iteraciones que se quieren realizar con los datos de entrenamiento.
+            iteraciones que se quieren realizar con los datos de entrenamiento.
         funcion_activacion : función (aquí será la funcion_escalon)
             Función de activación para el perceptrón.
     
@@ -43,7 +43,7 @@ def entrena_perceptron(X, y, z, eta, t, funcion_activacion):
     n = 0  # Número de iteraciones se inicializa a 0
     
     # Inicialización de variables adicionales
-    J = []  # Error cuadrático en cada epoch
+    J = []  # Error cuadrático en cada iteración
     
     while n < t:
         # Inicializar variables para esta iteración
@@ -51,7 +51,7 @@ def entrena_perceptron(X, y, z, eta, t, funcion_activacion):
         
         # Iterar sobre todos los ejemplos
         for i, x in enumerate(X):
-            # Calcular el producto interno más el bias
+            # Calcular el producto interno (net input) más el bias
             net_input = np.dot(x, w[1:]) + w[0] 
             
             # Predicción usando la función de activación

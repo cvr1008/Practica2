@@ -4,6 +4,12 @@
 # In[ ]:
 
 
+import itertools
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import Perceptron
+from sklearn import metrics
+import matplotlib.pyplot as plt
+import numpy as np
 
 def analiza_pares_clases(X, y, clases_unicas):
     """
@@ -22,6 +28,7 @@ def analiza_pares_clases(X, y, clases_unicas):
     ---------
     None (muestra métricas y gráficas de las matrices de confusión seleccionadas).
     """
+    
     
     # Parámetros del perceptrón
     eta = 0.1  # Learning rate

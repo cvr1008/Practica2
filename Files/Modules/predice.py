@@ -30,7 +30,7 @@ def predice(w, X, z, funcion_activacion):
             Array con los valores predichos para los datos de test.
     """
     # Calcular net input para cada ejemplo de prueba
-    net_input = np.dot(X, w[1:]) + w[0] - z
+    net_input = np.dot(X, w[1:]) + w[0] 
     
     # Aplicar función de activación a cada valor de net input
     y_pred = np.array([funcion_activacion(x) for x in net_input])
